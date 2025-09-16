@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "sizr",
+	"version": "${version}",
+	"name": "sizr",
+	"description": "funny lesbian weapons for bcsmp",
+	"authors": [
+		"limbo"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/strimpo/sizr-weaponry"
+	},
+	"license": "MIT License",
+	"icon": "assets/sizr/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.limbo.sizr.Sizr"
+		],
+		"client": [
+			"net.limbo.sizr.SizrClient"
+		]
+	},
+	"mixins": [
+		"sizr.mixins.json",
+		{
+			"config": "sizr.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.19",
+		"java": ">=17",
+		"fabric": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
